@@ -1,6 +1,6 @@
 '''
-Solo Checkpoint 02
-Author: Bro. Hayes
+Tick Tack Toe Game
+Michael McConnehey
 '''
 
 def main():
@@ -25,6 +25,7 @@ def main():
     # display the final board
 
     # show message for winner and thanks for playing
+    print('gg ez')
     pass
 
 def create_board():
@@ -44,7 +45,7 @@ def display_board(board):
     ''' Displays the current board
         return: None
     '''
-    
+
     pass
 
 def is_draw(board):
