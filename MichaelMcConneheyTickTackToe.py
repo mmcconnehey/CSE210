@@ -12,10 +12,10 @@ def main():
         Thanks them for playing
         return: None
     '''
+    player1 = 'x'
+    player2 = 'o'
     board = create_board()
     display_board(board)
-    # assign/get the first player
-    # create a board​
     # loop if there isn't a winner or if the game isn't a draw
         # display the board
 
@@ -44,17 +44,11 @@ def display_board(board):
     ''' Displays the current board
         return: None
     '''
-    print(f'\n{board[0]}|', end = '')
-    print(f'{board[1]}|', end = '')
-    print(f'{board[2]}')
+    print(f'\n{board[0]}|{board[1]}|{board[2]}')
     print('-+-+-')
-    print(f'{board[3]}|', end = '')
-    print(f'{board[4]}|', end = '')
-    print(f'{board[5]}')
+    print(f'{board[3]}|{board[4]}|{board[5]}')
     print('-+-+-')
-    print(f'{board[6]}|', end = '')
-    print(f'{board[7]}|', end = '')
-    print(f'{board[8]}')
+    print(f'{board[6]}|{board[7]}|{board[8]}')
     
     return
 
