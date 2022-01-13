@@ -12,7 +12,8 @@ def main():
         Thanks them for playing
         return: None
     '''
-    create_board()
+    board = create_board()
+    display_board(board)
     # assign/get the first player
     # create a board​
     # loop if there isn't a winner or if the game isn't a draw
@@ -25,7 +26,6 @@ def main():
     # display the final board
 
     # show message for winner and thanks for playing
-    print('gg ez')
     pass
 
 def create_board():
@@ -37,7 +37,6 @@ def create_board():
     for i in range(9):
         i += 1
         board.append(i)
-    print(board)
     
     return board
 
@@ -45,8 +44,19 @@ def display_board(board):
     ''' Displays the current board
         return: None
     '''
-
-    pass
+    print(f'\n{board[0]}|', end = '')
+    print(f'{board[1]}|', end = '')
+    print(f'{board[2]}')
+    print('-+-+-')
+    print(f'{board[3]}|', end = '')
+    print(f'{board[4]}|', end = '')
+    print(f'{board[5]}')
+    print('-+-+-')
+    print(f'{board[6]}|', end = '')
+    print(f'{board[7]}|', end = '')
+    print(f'{board[8]}')
+    
+    return
 
 def is_draw(board):
     ''' return: True if board is a draw, False if board is still playable '''
