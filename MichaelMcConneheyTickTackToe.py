@@ -85,7 +85,7 @@ def make_move(player, board):
         Assigns the player to that board location if it is a legal move
         return: None
     '''
-    move = int(input(f'{player}, make your move. '))    
+    move = int(input(f'{player}, make your move. '))   
     board[move-1] = player
 
 
