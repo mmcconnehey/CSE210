@@ -69,21 +69,21 @@ def is_draw(board):
 
 def is_winner(board):
     ''' return: True if someone won, False if there is no winner '''
-    if board[0] + board[1] + board[2]:
+    if board[0] == board[1] == board[2]:
         return True
-    elif board[3] + board[4] + board[5]:
+    elif board[3] == board[4] == board[5]:
         return True
-    elif board[6] + board[7] + board[8]:
+    elif board[6] == board[7] == board[8]:
         return True
-    elif board[0] + board[3] + board[6]:
+    elif board[0] == board[3] == board[6]:
         return True
-    elif board[1] + board[4] + board[7]:
+    elif board[1] == board[4] == board[7]:
         return True
-    elif board[2] + board[5] + board[8]:
+    elif board[2] == board[5] == board[8]:
         return True
-    elif board[0] + board[4] + board[8]:
+    elif board[0] == board[4] == board[8]:
         return True
-    elif board[2] + board[4] + board[6]:
+    elif board[2] == board[4] == board[6]:
         return True
     else:
         return False
