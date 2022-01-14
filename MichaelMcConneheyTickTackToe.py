@@ -3,9 +3,6 @@ Tic Tac Toe Game
 Michael McConnehey
 '''
 
-from re import L
-
-
 def main():
     ''' Holds the main game loop logic
         Selects a player
@@ -18,23 +15,18 @@ def main():
     player = next_player('')
     board = create_board()
 
+# loop if there isn't a winner or if the game isn't a draw
     while not is_winner(board) or is_draw(board):
+# display the board
         display_board(board)
+# allow the player to make a move
         make_move(player, board)
+# pick the next player
         player = next_player(player)
+# display the final board
     display_board(board)
+# show message for winner and thanks for playing
 
-    # loop if there isn't a winner or if the game isn't a draw
-        # display the board
-
-        # allow the player to make a move
-
-        # pick the next player
-
-    # display the final board
-
-    # show message for winner and thanks for playing
-    pass
 
 def create_board():
     ''' Creates a list that holds the spots on the board
