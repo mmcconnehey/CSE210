@@ -14,9 +14,8 @@ def main():
     '''
     player = next_player('')
     board = create_board()
-
 # loop if there isn't a winner or if the game isn't a draw
-    while not is_winner(board) or is_draw(board):
+    while not (is_winner(board) or is_draw(board)):
 # display the board
         display_board(board)
 # allow the player to make a move
@@ -25,8 +24,8 @@ def main():
         player = next_player(player)
 # display the final board
     display_board(board)
+    print('GG')
 # show message for winner and thanks for playing
-
 
 def create_board():
     ''' Creates a list that holds the spots on the board
@@ -34,10 +33,9 @@ def create_board():
         return: the board as a list
     '''
     board = []
-    for i in range(9):
+    for i in range(16):
         i += 1
         board.append(i)
-    
     return board
 
 def display_board(board):
@@ -45,12 +43,10 @@ def display_board(board):
         return: None
     '''
     print(f'\n{board[0]}|{board[1]}|{board[2]}')
-    print('-+-+-')
+    print('-+-+-+-')
     print(f'{board[3]}|{board[4]}|{board[5]}')
     print('-+-+-')
     print(f'{board[6]}|{board[7]}|{board[8]}')
-    
-    return
 
 def is_draw(board):
     ''' return: True if board is a draw, False if board is still playable '''
@@ -85,9 +81,8 @@ def make_move(player, board):
         Assigns the player to that board location if it is a legal move
         return: None
     '''
-    move = int(input(f'{player}, make your move. '))   
+    move = int(input(f'{player}, make your move. '))
     board[move-1] = player
-
 
 def next_player(current):
     ''' return: x if current is o, otherwise x '''
