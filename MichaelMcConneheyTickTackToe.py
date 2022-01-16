@@ -20,11 +20,12 @@ def main():
         display_board(board)
 # allow the player to make a move
         make_move(player, board)
+        print(f'{player.capitalize()}, good move')
 # pick the next player
         player = next_player(player)
 # display the final board
     display_board(board)
-    print('GG')
+    print(f'{player.capitalize()} won')
 # show message for winner and thanks for playing
 
 def create_board():
@@ -90,7 +91,6 @@ def next_player(current):
         return 'x'
     else:
         return 'o'
-
 
 # run main if this has been called from the command line
 if __name__ == "__main__":
